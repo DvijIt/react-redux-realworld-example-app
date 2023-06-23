@@ -53,7 +53,7 @@ jobs:
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
       - name: Copy files to the server
-        run: rsync -a --progress --human-readable --delete build/* $SSH_USER@$SSH_HOST:~/realworld/public/
+        run: rsync -a --progress --human-readable --delete ../build/* $SSH_USER@$SSH_HOST:~/realworld/public/
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_USER: ${{ secrets.SSH_USER }}
