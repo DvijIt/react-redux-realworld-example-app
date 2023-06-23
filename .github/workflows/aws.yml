@@ -33,8 +33,6 @@ jobs:
     needs: build
     name: Deploy
     runs-on: ubuntu-latest
-    container:
-      image: node:16-alpine
     steps:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
